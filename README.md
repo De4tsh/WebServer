@@ -120,7 +120,7 @@ Redis Nginx 采用 Reactor 模式
 主线程和所有子线程通过一个共享的工作队列来同步，子线程都睡眠在该工作队列上，当有新的任务到来时，主线程将任务添加到工作队列中。这将唤醒正在等待任务的子线程，不过只有一个子线程将获得新任务的“接管权”，它可以从工作队列中取出任务并执行，而其他子线程将继续睡眠在工作队列上
 
 ## 本项目中线程池的整体调用流程
-https://raw.githubusercontent.com/De4tsh/typoraPhoto/main/img/202212232350809.png
+![WebServer线程池逻辑.drawio](https://raw.githubusercontent.com/De4tsh/typoraPhoto/main/img/202212232350809.png)
 
 
 
